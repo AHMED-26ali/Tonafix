@@ -70,8 +70,8 @@ export const Header: React.FC<HeaderProps> = ({
       id="main-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/95 backdrop-blur-md border-b border-cyan-950/40 shadow-xl shadow-black/40 py-2.5'
-          : 'bg-gradient-to-b from-slate-950/90 via-slate-950/60 to-transparent py-4'
+          ? 'bg-[#060c24]/95 backdrop-blur-md border-b border-[#0066ff]/30 shadow-2xl shadow-[#040818]/80 py-2.5'
+          : 'bg-gradient-to-b from-[#060c24]/90 via-[#060c24]/60 to-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,28 +86,27 @@ export const Header: React.FC<HeaderProps> = ({
             id="header-brand-link"
             className="flex items-center gap-3.5 group cursor-pointer"
           >
-            <div className="relative w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-slate-900 border border-cyan-500/30 p-1 overflow-hidden shadow-lg shadow-cyan-950/30 group-hover:border-pink-500/50 transition-colors">
+            <div className="relative w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-[#0a1334] border border-[#00c8ff]/50 overflow-hidden shadow-lg shadow-[#0052cc]/20 group-hover:border-[#ec4899]/70 transition-all duration-300">
               <img
                 src={companyAssets.logo}
                 alt="شعار تونافيكس للدهانات"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-pink-500/10 pointer-events-none" />
             </div>
             <div className="flex flex-col text-right">
               <span className="text-lg sm:text-xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">
                 {companyInfo.name}
               </span>
-              <span className="text-[11px] font-semibold text-slate-400 tracking-wider flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span className="text-[11px] font-semibold text-slate-300 tracking-wider flex items-center gap-1.5">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00f0ff] animate-pulse"></span>
                 <span>حلول طلاء صناعي متخصصة</span>
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav id="desktop-nav" className="hidden xl:flex items-center gap-1 bg-slate-900/70 border border-slate-800/80 rounded-full px-4 py-1.5 backdrop-blur-md">
+          <nav id="desktop-nav" className="hidden xl:flex items-center gap-1 bg-[#091438]/80 border border-[#0066ff]/25 rounded-full px-4 py-1.5 backdrop-blur-md shadow-inner">
             {navLinks.map((link) => {
               const sectionId = link.href.replace('#', '');
               const isActive = activeSection === sectionId;
@@ -118,8 +117,8 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleNavClick(link.href)}
                   className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-blue-600 via-cyan-600 to-pink-600 text-white shadow-md shadow-cyan-950/50'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      ? 'bg-gradient-to-r from-[#0052cc] via-[#0099ff] to-[#00f0ff] text-white shadow-md shadow-[#0066ff]/40'
+                      : 'text-slate-200 hover:text-cyan-300 hover:bg-[#102256]/70'
                   }`}
                 >
                   {link.label}
@@ -133,9 +132,9 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="header-cta-button"
               onClick={() => handleNavClick('#contact')}
-              className="relative group overflow-hidden rounded-lg px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-lg shadow-cyan-900/30 transition-all duration-300 hover:shadow-cyan-500/25 active:scale-95 cursor-pointer"
+              className="relative group overflow-hidden rounded-xl px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-lg shadow-[#0066ff]/30 transition-all duration-300 hover:shadow-[#ec4899]/30 active:scale-95 cursor-pointer"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-pink-600 group-hover:opacity-90 transition-opacity"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#0052cc] via-[#00c8ff] to-[#ec4899] group-hover:brightness-110 transition-all duration-300"></span>
               <span className="relative z-10 flex items-center gap-1.5">
                 <PhoneCall className="w-3.5 h-3.5" />
                 <span>تواصل معنا</span>
@@ -146,7 +145,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/50 transition-colors"
+              className="xl:hidden p-2 rounded-xl bg-[#091438] border border-[#0066ff]/30 text-slate-200 hover:text-cyan-300 hover:border-[#00f0ff]/50 transition-colors cursor-pointer"
               aria-label="القائمة الرئيسية"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -159,7 +158,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div
           id="mobile-menu-drawer"
-          className="xl:hidden bg-slate-950/98 border-b border-cyan-900/40 px-5 pt-3 pb-6 space-y-2 backdrop-blur-xl shadow-2xl"
+          className="xl:hidden bg-[#070e28]/98 border-b border-[#0066ff]/30 px-5 pt-3 pb-6 space-y-2 backdrop-blur-2xl shadow-2xl"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-2">
             {navLinks.map((link) => {
@@ -171,8 +170,8 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleNavClick(link.href)}
                   className={`flex items-center justify-between w-full px-3.5 py-2.5 rounded-lg text-right text-sm font-semibold transition-all ${
                     isActive
-                      ? 'bg-gradient-to-l from-blue-600/30 via-cyan-600/20 to-transparent text-cyan-300 border-r-2 border-cyan-400'
-                      : 'text-slate-300 hover:bg-slate-900 hover:text-white'
+                      ? 'bg-gradient-to-l from-[#0052cc]/40 via-[#00f0ff]/20 to-transparent text-cyan-300 border-r-2 border-[#00f0ff]'
+                      : 'text-slate-300 hover:bg-[#0e1a42] hover:text-white'
                   }`}
                 >
                   <span>{link.label}</span>
@@ -182,10 +181,10 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </div>
 
-          <div className="pt-3 border-t border-slate-800 flex flex-col gap-2">
+          <div className="pt-3 border-t border-[#0066ff]/20 flex flex-col gap-2">
             <button
               onClick={() => handleNavClick('#contact')}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-pink-600 shadow-lg shadow-cyan-950/50"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#0052cc] via-[#00c8ff] to-[#ec4899] shadow-lg shadow-[#0066ff]/40 cursor-pointer hover:brightness-110 transition-all"
             >
               <PhoneCall className="w-4 h-4" />
               <span>طلب عرض أسعار واستشارة فنية</span>

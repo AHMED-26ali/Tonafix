@@ -2,12 +2,12 @@ import heroBg from '../assets/images/tonavix_hero_bg_1788404070225.jpg';
 import fireCoatingImg from '../assets/images/tonavix_fire_coating_1788404085121.jpg';
 import indCoatingImg from '../assets/images/tonavix_ind_coating_1788404100984.jpg';
 import ncCoatingImg from '../assets/images/tonavix_nc_coating_1788404115208.jpg';
-import logoImg from '../assets/images/tonavix_logo_1788404052828.jpg';
+const logoImgUrl = 'https://i.pinimg.com/736x/40/96/e4/4096e47c8f10011b3a7e07b49932a78f.jpg';
 
 import { ProductItem, IndustryItem, TechnicalDocument } from '../types';
 
 export const companyAssets = {
-  logo: logoImg,
+  logo: logoImgUrl,
   heroBg,
   fireCoating: fireCoatingImg,
   indCoating: indCoatingImg,

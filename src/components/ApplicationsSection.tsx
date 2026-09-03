@@ -45,19 +45,23 @@ export const ApplicationsSection: React.FC<ApplicationsSectionProps> = ({
   return (
     <section
       id="applications"
-      className="py-24 bg-slate-900/70 border-t border-slate-800/80 relative overflow-hidden"
+      className="py-24 bg-[#070e28] border-t border-[#0066ff]/25 relative overflow-hidden"
     >
+      {/* Ambient background lighting */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#0066ff]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#00c8ff]/10 rounded-full blur-[140px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-right max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/60 border border-cyan-800/50 text-cyan-400 text-xs font-bold mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#061e38] border border-[#00c8ff]/40 text-cyan-300 text-xs font-bold mb-3 shadow-sm">
             <span>القطاعات والمجالات الصناعية</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             مجالات استخدام وتطبيق دهانات تونافيكس
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-200 leading-relaxed">
             تمت صياغة منتجاتنا لتلائم بيئات التشغيل الثقيلة والمعايير الصارمة في مختلف القطاعات الهندسية والمصانع الإنتاجية في كافة محافظات مصر.
           </p>
         </div>
@@ -67,27 +71,27 @@ export const ApplicationsSection: React.FC<ApplicationsSectionProps> = ({
           {industriesList.map((ind) => (
             <div
               key={ind.id}
-              className="group p-6 rounded-2xl bg-slate-950/80 border border-slate-800/90 hover:border-cyan-500/50 hover:bg-slate-950 transition-all duration-300 flex flex-col justify-between text-right shadow-lg hover:shadow-cyan-950/20"
+              className="group p-6 rounded-2xl bg-[#091438]/90 border border-[#0066ff]/25 hover:border-[#00c8ff]/60 hover:shadow-[0_0_25px_rgba(0,200,255,0.15)] hover:bg-[#0c1b4a] transition-all duration-300 flex flex-col justify-between text-right shadow-lg backdrop-blur-sm"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700/80 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-cyan-500/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-[#0a1844] border border-[#0066ff]/40 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-[#00c8ff]/60 transition-all shadow-sm">
                   {getIcon(ind.iconName)}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#00f0ff] transition-colors">
                   {ind.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {ind.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <div className="text-[11px] font-semibold text-cyan-400/90 bg-cyan-950/60 px-2.5 py-1 rounded border border-cyan-900/50">
+              <div className="pt-4 mt-4 border-t border-[#0066ff]/20 flex items-center justify-between">
+                <div className="text-[11px] font-semibold text-cyan-300 bg-[#081b3d] px-2.5 py-1 rounded border border-[#00c8ff]/40">
                   {ind.coatingsUsed}
                 </div>
                 <button
                   onClick={() => onConsultIndustry(ind.title)}
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+                  className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-[#0052cc]/40 transition-colors cursor-pointer"
                   title="استشارة فنية لهذا القطاع"
                 >
                   <ArrowUpRight className="w-4 h-4" />

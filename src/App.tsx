@@ -120,7 +120,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-white" dir="rtl">
+    <div className="min-h-screen bg-[#060b1e] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-white relative overflow-x-hidden" dir="rtl">
+      {/* Global Branded Ambient Light System matching Tonavix Logo */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Top-center Electric Blue & Cyan Horizon Glow */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-[#0066ff]/20 via-[#00f0ff]/10 to-transparent blur-[140px] rounded-full" />
+        {/* Right side Subtle Magenta & Hot Pink Glow */}
+        <div className="absolute top-[30%] -right-48 w-[600px] h-[600px] bg-gradient-to-l from-[#ec4899]/12 via-[#8b5cf6]/10 to-transparent blur-[150px] rounded-full" />
+        {/* Left side Deep Royal Blue & Cyan Glow */}
+        <div className="absolute top-[65%] -left-48 w-[650px] h-[650px] bg-gradient-to-r from-[#0052cc]/15 via-[#00f0ff]/8 to-transparent blur-[160px] rounded-full" />
+        {/* Bottom subtle magenta transition */}
+        <div className="absolute -bottom-20 right-1/4 w-[500px] h-[400px] bg-gradient-to-t from-[#d946ef]/10 via-[#0052cc]/10 to-transparent blur-[140px] rounded-full" />
+      </div>
       
       {/* Sticky Header */}
       <Header

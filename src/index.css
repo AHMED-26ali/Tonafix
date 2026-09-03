@@ -4,20 +4,55 @@
   html {
     font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
     scroll-behavior: smooth;
+    background-color: #060b1e;
+    color: #e2e8f0;
   }
 }
 
-/* Custom subtle scrollbar */
+/* Tonavix Ambient Brand Glows & Effects */
+.tonavix-gradient-primary {
+  background: linear-gradient(135deg, #0066ff 0%, #00f0ff 50%, #ec4899 100%);
+}
+
+.tonavix-gradient-cta {
+  background: linear-gradient(135deg, #0052cc 0%, #00c8ff 45%, #e11d48 100%);
+}
+
+.tonavix-gradient-blue-cyan {
+  background: linear-gradient(135deg, #0052cc 0%, #00f0ff 100%);
+}
+
+.tonavix-gradient-blue-magenta {
+  background: linear-gradient(135deg, #0052cc 0%, #8b5cf6 50%, #ec4899 100%);
+}
+
+.tonavix-gradient-magenta-pink {
+  background: linear-gradient(135deg, #d946ef 0%, #ff1b8d 100%);
+}
+
+.tonavix-card-glass {
+  background: rgba(10, 20, 56, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 200, 255, 0.18);
+}
+
+.tonavix-card-glass:hover {
+  border-color: rgba(0, 240, 255, 0.38);
+  box-shadow: 0 10px 30px -10px rgba(0, 102, 255, 0.25), 0 0 20px -5px rgba(236, 72, 153, 0.15);
+}
+
+/* Custom branded scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #060b1e;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: linear-gradient(to bottom, #0052cc, #00c8ff, #ec4899);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0284c7;
+  background: linear-gradient(to bottom, #0066ff, #00f0ff, #ff1b8d);
 }
+

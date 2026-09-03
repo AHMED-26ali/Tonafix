@@ -35,10 +35,10 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 py-12 sm:py-20 relative overflow-hidden" dir="rtl">
-      {/* Background ambient lighting */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="min-h-screen bg-transparent text-slate-200 py-12 sm:py-20 relative overflow-hidden" dir="rtl">
+      {/* Background ambient lighting matching logo */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-[#0066ff]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#00f0ff]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -48,12 +48,12 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
             <li>
               <button
                 onClick={onNavigateHome}
-                className="hover:text-cyan-400 transition-colors flex items-center gap-1 cursor-pointer"
+                className="hover:text-[#00f0ff] transition-colors flex items-center gap-1 cursor-pointer"
               >
                 <span>الرئيسية</span>
               </button>
             </li>
-            <li className="text-slate-600">/</li>
+            <li className="text-[#0066ff]/60">/</li>
             <li className="text-cyan-300 font-semibold" aria-current="page">
               سياسة الخصوصية
             </li>
@@ -61,12 +61,12 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
         </nav>
 
         {/* Header Banner */}
-        <header className="mb-12 p-6 sm:p-10 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl backdrop-blur-md relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-blue-500 via-cyan-500 to-pink-500" />
+        <header className="mb-12 p-6 sm:p-10 rounded-3xl bg-[#091438]/95 border border-[#0066ff]/30 shadow-2xl backdrop-blur-md relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-[#0052cc] via-[#00c8ff] to-[#ec4899]" />
           
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/70 border border-blue-800/60 text-blue-400 text-xs font-bold">
-              <ShieldCheck className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#061e38] border border-[#00c8ff]/40 text-cyan-300 text-xs font-bold">
+              <ShieldCheck className="w-4 h-4 text-[#00f0ff]" />
               <span>حماية البيانات والخصوصية</span>
             </div>
 
@@ -80,27 +80,27 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
             سياسة الخصوصية
           </h1>
 
-          <div className="space-y-2 text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
+          <div className="space-y-2 text-sm sm:text-base text-slate-200 leading-relaxed max-w-3xl">
             <p>
               تلتزم "تونافيكس للدهانات" باحترام خصوصية زوار الموقع وحماية البيانات الشخصية التي يتم جمعها من خلاله وفقًا للأنظمة والقوانين المعمول بها.
             </p>
-            <p className="text-slate-400 text-xs sm:text-sm">
+            <p className="text-slate-300 text-xs sm:text-sm">
               توضح سياسة الخصوصية هذه نوع البيانات التي قد يتم جمعها وكيفية استخدامها وحمايتها.
             </p>
           </div>
 
-          <div className="mt-6 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-6 pt-6 border-t border-[#0066ff]/20 flex flex-wrap items-center justify-between gap-4">
             <button
               onClick={onNavigateHome}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#060c24] hover:bg-[#0a1844] text-slate-200 hover:text-white border border-[#0066ff]/30 text-xs font-bold transition-all cursor-pointer"
             >
-              <ArrowRight className="w-4 h-4 text-cyan-400" />
+              <ArrowRight className="w-4 h-4 text-[#00f0ff]" />
               <span>العودة إلى الصفحة الرئيسية</span>
             </button>
 
             <button
               onClick={onNavigateTerms}
-              className="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs font-bold text-cyan-300 hover:text-[#00f0ff] transition-colors cursor-pointer"
             >
               <span>الانتقال إلى شروط وأحكام الاستخدام</span>
               <ChevronLeft className="w-4 h-4" />
@@ -415,7 +415,7 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
               <div className="pt-2">
                 <button
                   onClick={onContactClick}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:brightness-110 text-white text-xs sm:text-sm font-bold shadow-lg shadow-cyan-950/40 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#0052cc] via-[#00c8ff] to-[#ec4899] hover:brightness-110 text-white text-xs sm:text-sm font-bold shadow-lg shadow-[#0052cc]/30 transition-all cursor-pointer"
                 >
                   <PhoneCall className="w-4 h-4" />
                   <span>بيانات الاتصال والتواصل الرسمي</span>
@@ -427,10 +427,10 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
         </article>
 
         {/* Footer Navigation Bar */}
-        <div className="mt-12 p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+        <div className="mt-12 p-6 rounded-2xl bg-[#091438]/90 border border-[#0066ff]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
           <button
             onClick={onNavigateTerms}
-            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-bold transition-colors cursor-pointer"
+            className="flex items-center gap-2 text-cyan-300 hover:text-[#00f0ff] font-bold transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>عرض وثيقة "شروط وأحكام الاستخدام"</span>
@@ -438,7 +438,7 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({
 
           <button
             onClick={onNavigateHome}
-            className="px-4 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 font-bold transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-[#060c24] hover:bg-[#0a1844] text-slate-200 hover:text-white border border-[#0066ff]/30 font-bold transition-colors cursor-pointer"
           >
             العودة للصفحة الرئيسية
           </button>
