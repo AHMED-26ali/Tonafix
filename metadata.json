@@ -1,0 +1,6 @@
+{
+  "name": "تونافيكس للدهانات",
+  "description": "تونافيكس للدهانات شركة متخصصة في حلول الدهانات النارية والصناعية ودهانات NC للمنشآت والمشروعات والتطبيقات الصناعية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
