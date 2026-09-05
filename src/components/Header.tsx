@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, PhoneCall, ChevronLeft, ArrowUpRight } from 'lucide-react';
+import { Menu, X, PhoneCall, ChevronLeft, ArrowUpRight, Phone, MessageSquare } from 'lucide-react';
 import { navLinks, companyAssets, companyInfo } from '../data/companyData';
 
 interface HeaderProps {
@@ -129,6 +129,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Left Side Actions (CTA & Mobile Menu Trigger) */}
           <div className="flex items-center gap-2.5">
+            {/* Contact CTA button */}
             <button
               id="header-cta-button"
               onClick={() => handleNavClick('#contact')}
@@ -158,9 +159,29 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div
           id="mobile-menu-drawer"
-          className="xl:hidden bg-[#070e28]/98 border-b border-[#0066ff]/30 px-5 pt-3 pb-6 space-y-2 backdrop-blur-2xl shadow-2xl"
+          className="xl:hidden bg-[#070e28]/98 border-b border-[#0066ff]/30 px-5 pt-3 pb-6 space-y-3 backdrop-blur-2xl shadow-2xl"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-2">
+          {/* Quick Direct Buttons for Mobile */}
+          <div className="grid grid-cols-2 gap-2 pb-2 border-b border-[#0066ff]/20">
+            <a
+              href={companyInfo.phoneTel}
+              className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#0052cc] to-[#0099ff] shadow-md active:scale-95"
+            >
+              <Phone className="w-4 h-4" />
+              <span>اتصال هاتفي</span>
+            </a>
+            <a
+              href={companyInfo.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-500 shadow-md active:scale-95"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>دردشة واتساب</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-1">
             {navLinks.map((link) => {
               const sectionId = link.href.replace('#', '');
               const isActive = activeSection === sectionId;
@@ -181,7 +202,7 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </div>
 
-          <div className="pt-3 border-t border-[#0066ff]/20 flex flex-col gap-2">
+          <div className="pt-2 border-t border-[#0066ff]/20 flex flex-col gap-2">
             <button
               onClick={() => handleNavClick('#contact')}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-[#0052cc] via-[#00c8ff] to-[#ec4899] shadow-lg shadow-[#0066ff]/40 cursor-pointer hover:brightness-110 transition-all"

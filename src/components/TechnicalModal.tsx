@@ -59,7 +59,7 @@ export const TechnicalModal: React.FC<TechnicalModalProps> = ({
               <span className="text-slate-300 font-mono">{doc.fileSize}</span>
             </div>
             <div>
-              <span className="text-[11px] text-slate-400 block">الجهة المصنعة</span>
+              <span className="text-[11px] text-slate-400 block">الشركة</span>
               <span className="text-[#ec4899] font-bold">تونافيكس</span>
             </div>
           </div>

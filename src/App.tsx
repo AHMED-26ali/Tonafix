@@ -14,6 +14,7 @@ import { Footer } from './components/Footer';
 import { TechnicalModal } from './components/TechnicalModal';
 import { TermsPage } from './components/TermsPage';
 import { PrivacyPage } from './components/PrivacyPage';
+import { FloatingContactButtons } from './components/FloatingContactButtons';
 import { TechnicalDocument } from './types';
 import { technicalDocsList, companyInfo } from './data/companyData';
 
@@ -232,6 +233,9 @@ export default function App() {
         onClose={() => setSelectedDoc(null)}
         onRequestQuote={handleRequestDocQuote}
       />
+
+      {/* Floating Direct WhatsApp & Phone Call Action Buttons */}
+      <FloatingContactButtons />
 
     </div>
   );

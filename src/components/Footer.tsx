@@ -9,6 +9,8 @@ import {
   ArrowUp,
   Globe,
   Share2,
+  MessageSquare,
+  Clock,
 } from 'lucide-react';
 import { companyAssets, companyInfo, navLinks } from '../data/companyData';
 
@@ -60,7 +62,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
-              شركة رائدة في تصنيع الدهانات الصناعية المتقدمة، أنظمة مقاومة الحريق الإنشائية، ودهانات NC للورش والمصانع والهياكل الفولاذية في مصر والشرق الأوسط.
+              شركة رائدة متخصصة في حلول وتوريد الدهانات الصناعية المتقدمة، أنظمة مقاومة الحريق الإنشائية، ودهانات NC للورش والمصانع والهياكل الفولاذية بالمملكة العربية السعودية والشرق الأوسط.
             </p>
           </div>
 
@@ -130,20 +132,56 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Contact Details Summary (3 cols) */}
           <div className="lg:col-span-3 space-y-3 text-xs">
             <h4 className="text-sm font-bold text-white tracking-wider">
-              المصنع والإدارة
+              مقر الشركة والتواصل
             </h4>
             <div className="space-y-2.5">
-              <div className="flex items-start gap-2 text-slate-300">
-                <MapPin className="w-4 h-4 text-[#00f0ff] shrink-0 mt-0.5" />
-                <span>{companyInfo.address}</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <Phone className="w-4 h-4 text-[#00f0ff] shrink-0" />
-                <span className="dir-ltr">{companyInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <Mail className="w-4 h-4 text-[#ec4899] shrink-0" />
-                <span>{companyInfo.email}</span>
+              <a
+                href={companyInfo.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-slate-300 hover:text-cyan-300 transition-colors group"
+                title="فتح الموقع في خرائط Google"
+              >
+                <MapPin className="w-4 h-4 text-[#00f0ff] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <span className="leading-relaxed">{companyInfo.address}</span>
+              </a>
+
+              {/* Direct Phone Call */}
+              <a
+                href={companyInfo.phoneTel}
+                className="flex items-center gap-2 text-slate-300 hover:text-cyan-300 transition-colors group"
+                title="انقر للاتصال المباشر"
+              >
+                <Phone className="w-4 h-4 text-[#00f0ff] shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="dir-ltr font-mono font-bold">{companyInfo.phoneDisplay}</span>
+              </a>
+
+              {/* Direct WhatsApp */}
+              <a
+                href={companyInfo.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-slate-300 hover:text-emerald-300 transition-colors group"
+                title="محادثة واتساب فورية"
+              >
+                <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span>واتساب مباشر: <strong className="font-mono text-emerald-400 dir-ltr inline-block">{companyInfo.whatsappDisplay}</strong></span>
+              </a>
+
+              {/* Direct Email */}
+              <a
+                href={`mailto:${companyInfo.email}`}
+                className="flex items-center gap-2 text-slate-300 hover:text-pink-300 transition-colors group"
+                title="إرسال بريد إلكتروني"
+              >
+                <Mail className="w-4 h-4 text-[#ec4899] shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-mono">{companyInfo.email}</span>
+              </a>
+
+              {/* Working Hours */}
+              <div className="flex items-start gap-2 text-slate-300 pt-1 border-t border-[#0066ff]/20">
+                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <span className="text-[11px] text-amber-300/90">{companyInfo.workingHours}</span>
               </div>
             </div>
           </div>
@@ -175,7 +213,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           <div className="flex items-center gap-4">
             <span className="text-[11px] text-slate-400 hidden sm:inline">
-              صُنع بمواصفات صناعية وهندسية للمنشآت المصرية
+              صُنع بمواصفات صناعية وهندسية للمنشآت والمشاريع بالمملكة العربية السعودية
             </span>
 
             <button
