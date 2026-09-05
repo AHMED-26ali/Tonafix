@@ -1,77 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- الصفحة الرئيسية -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tonafix.vercel.app/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- أنظمة الدهانات النارية المقاومة للحريق -->
-  <url>
-    <loc>https://tonafix.vercel.app/#fire-paints</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- أنظمة الدهانات الصناعية ومقاومة التآكل -->
-  <url>
-    <loc>https://tonafix.vercel.app/#industrial-paints</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- دهانات النيتروسليلوز سريعة الجفاف NC -->
-  <url>
-    <loc>https://tonafix.vercel.app/#nc-paints</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- المواصفات والمستندات الفنية TDS و SDS -->
-  <url>
-    <loc>https://tonafix.vercel.app/#technical</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- بطاقات المواصفات التقنية -->
-  <url>
-    <loc>https://tonafix.vercel.app/#specs</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- حاسبة استهلاك وسماكة الدهان الهندسية -->
-  <url>
-    <loc>https://tonafix.vercel.app/#calculator</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- عن شركة تونافيكس -->
-  <url>
-    <loc>https://tonafix.vercel.app/#about</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- تواصل معنا وطلب عروض الأسعار -->
-  <url>
-    <loc>https://tonafix.vercel.app/#contact</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
